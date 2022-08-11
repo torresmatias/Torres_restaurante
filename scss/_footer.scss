@@ -1,0 +1,120 @@
+.footer {
+    background-color: #1f2224;
+    padding-top: 1rem;
+  }
+  
+  .footer_pt1 {
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+    grid-template-rows: 60% 40%;
+    grid-template-areas: "a1 a2 a3"
+      "a1 a2 a6";
+    align-items: center;
+    justify-items: center;
+  }
+  
+  .footer_pt1 h2 {
+    text-transform: uppercase;
+    color: $color_primario;
+    font-size: 20px;
+    text-align: center;
+  }
+  
+  .footer_pt1 p {
+    color: $color_primario;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  
+  .footer_pt1 iframe {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .footer_direccion {
+    grid-area: a1;
+  }
+  
+  .footer_logo {
+    grid-area: a2;
+  }
+  
+  .footer_logo a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*Se utiliza flex en el padre del "img" para poder centrarlo luego de cambiarle el "width"*/
+  }
+  
+  .footer_logo img {
+    width: 75%;
+  }
+  
+  .footer_tel {
+    grid-area: a3;
+    height: 100%;
+  }
+  
+  .footer_social {
+    grid-area: a6;
+  }
+  
+  .footer_redes {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+  }
+  
+  .footer_pt2 {
+    background-color: #06101a;
+    padding: 15px 10px;
+    text-align: center;
+    color: $color_primario;
+  }
+  
+  .footer .footer_pt2 small {
+    font-size: 15px;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .footer_pt1 {
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: 30% 35% 20% 15%;
+      grid-template-areas: "a1"
+        "a2"
+        "a3"
+        "a4";
+    }
+  
+    .footer_logo {
+      grid-area: a1;
+    }
+  
+    .footer_direccion {
+      grid-area: a2;
+    }
+  
+    .footer_tel {
+      grid-area: a3;
+    }
+  
+    .footer_social {
+      grid-area: a4;
+    }
+  }
+  
+  @media only screen and (max-width: 266px) {
+    .footer_pt1 {
+      height: 700px;
+    }
+  
+    .footer_media h2 {
+      font-weight: lighter;
+      font-size: 16px;
+    }
+  
+    .footer_redes svg {
+      width: 90%;
+    }
+  }

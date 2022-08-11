@@ -1,0 +1,16 @@
+body {
+    font-family: $fuente_secundaria;
+    background: #ECE9E6;
+    background: -webkit-linear-gradient(to bottom, #FFFFFF, #ECE9E6);
+    background: linear-gradient(to bottom, #FFFFFF, #ECE9E6);
+  }
+  
+  .global_frases h2 {
+    background-color: #1f2224;
+    text-align: center;
+    font-size: 2rem;
+    font-family: $fuente_principal;
+    color: $color_primario;
+    padding: 2rem;
+    border-bottom: 1px solid black;
+  }
