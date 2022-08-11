@@ -11,20 +11,19 @@
     color: $color_primario;
     font-size: 2.5rem;
     text-align: center;
-  }
-  
-  .header_titulo h1 {
-    margin-bottom: 0px;
+    & h1 {
+      margin-bottom: 0px;
+    }
   }
   
   .header_enlace {
     display: flex;
     justify-content: center;
+    & img {
+      width: 75%;
+    }
   }
-  .header_enlace img {
-    width: 75%;
-  }
-  
+    
   .header_nav {
     background-color: #fff;
     display: flex;
@@ -32,51 +31,45 @@
     list-style: none;
     margin: 0 0;
     padding: 1rem 0rem;
-    border-bottom: 1px solid black
+    border-bottom: 1px solid black;
+    & a {
+      padding: 0px 20px;
+      text-decoration: none;
+      font-size: 16px;
+      text-transform: uppercase;
+      font-weight: bold;
+      color: black
+    }
+    & :hover {
+      background-color: black;
+      color: $color_primario;
+      transform: scale(110%, 120%);
+    }
   }
   
-  .header_nav a {
-    padding: 0px 20px;
-    text-decoration: none;
-    font-size: 16px;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: black
-  }
-  
-  .header_nav :hover {
-    background-color: black;
-    color: $color_primario;
-    transform: scale(110%, 120%);
-  }
-  
-  @media only screen and (max-width: 768px) {
+   @media only screen and (max-width: 768px) {
   
     .header_main {
       flex-direction: column;
       padding: 2rem;
-    }
-  
-    .header_titulo {
-      font-size: 150%;
-    }
-  
-  
-    .header_main a {
-      display: flex;
-      justify-content: center;
-    }
-  
-    .header_main img {
-      width: 60%;
-    }
+      & a {
+        display: flex;
+        justify-content: center;
+      }
+      & img {
+        width: 60%;
+      }
+      .header_titulo {
+        font-size: 150%;
+      }  
+    }      
   
     .header_nav {
       flex-direction: column;
       align-items: center;
+      & li {
+        margin: 10px;
+      }
     }
-  
-    .header_nav li {
-      margin: 10px;
-    }
+      
   }
