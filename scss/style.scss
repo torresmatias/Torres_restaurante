@@ -26,6 +26,7 @@
   .index_info_bistro {
 
     @include box_sobra(#fff, 1rem, 1rem 1rem, center);
+
     & h2 {
       text-transform: uppercase;
       font-weight: bold;
@@ -54,22 +55,66 @@
 }
 
 .index_galeria_img {
+
+  background: linear-gradient(to bottom, #1f2224, #ECE9E6);
   margin-bottom: 24px;
   display: grid;
-  grid-template-columns: 50% 50%;
-  justify-items: center;
-  align-items: center;
-  grid-template-areas: "a1 a2"
-    "a3 a4"
-    "a5 a6"
-    "a7 a8";
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-areas: "a1 a2 a3 a4 a5"
+    "a6 a2 a8 a9 a10"
+    "a11 a12 a13 a13 a15"
+    "a16 a17 a18 a19 a20";
+  gap: 1rem;
+
+  .galeria_img1 {
+    grid-area: a2;
+  }
+
+  .galeria_img2 {
+    grid-area: a3;
+  }
+
+  .galeria_img3 {
+    grid-area: a4;
+  }
+
+  .galeria_img4 {
+    grid-area: a8;
+  }
+
+  .galeria_img5 {
+    grid-area: a9;
+  }
+
+  .galeria_img6 {
+    grid-area: a12;
+  }
+
+  .galeria_img7 {
+    grid-area: a13;
+  }
+
+  .galeria_img8 {
+    grid-area: a17;
+  }
+
+  .galeria_img9 {
+    grid-area: a18;
+  }
+
+  .galeria_img10 {
+    grid-area: a19;
+  }
 
   & :hover {
-    transform: scale(120%, 120%);
+    transform: scale(105%, 105%);
+    border: solid 2px $color_primario;
+    margin: -2px;
   }
 
   & img {
-    margin: 16px;
+    width: 100%;
+    height: 100%;
   }
 }
 
@@ -89,13 +134,10 @@
   .index_galeria_img {
     display: flex;
     flex-direction: column;
-
-    & img {
-      width: 75%;
-    }
+    gap: 2rem;
 
     & :hover {
-      transform: scale(110%, 110%);
+      transform: scale(105%, 105%);
     }
   }
 
@@ -187,7 +229,8 @@
 }
 
 .contacto_img2 {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(../img/contacto_img2.jpg) center/cover no-repeat;;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(../img/contacto_img2.jpg) center/cover no-repeat;
+  ;
 }
 
 .contacto_img3 {

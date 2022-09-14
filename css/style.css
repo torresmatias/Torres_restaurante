@@ -2,7 +2,7 @@ body {
   font-family: "Abel", sans-serif;
   background: #ECE9E6;
   background: -webkit-linear-gradient(to bottom, #FFFFFF, #ECE9E6);
-  background: linear-gradient(to bottom, #FFFFFF, #ECE9E6); }
+  background: linear-gradient(to bottom, #cec8c8, #ECE9E6); }
 
 .global_frases h2 {
   background-color: #1f2224;
@@ -193,16 +193,39 @@ body {
   margin-top: 32PX; }
 
 .index_galeria_img {
+  background: linear-gradient(to bottom, #1f2224, #ECE9E6);
   margin-bottom: 24px;
   display: grid;
-  grid-template-columns: 50% 50%;
-  justify-items: center;
-  align-items: center;
-  grid-template-areas: "a1 a2" "a3 a4" "a5 a6" "a7 a8"; }
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-areas: "a1 a2 a3 a4 a5" "a6 a2 a8 a9 a10" "a11 a12 a13 a13 a15" "a16 a17 a18 a19 a20";
+  gap: 1rem; }
+  .index_galeria_img .galeria_img1 {
+    grid-area: a2; }
+  .index_galeria_img .galeria_img2 {
+    grid-area: a3; }
+  .index_galeria_img .galeria_img3 {
+    grid-area: a4; }
+  .index_galeria_img .galeria_img4 {
+    grid-area: a8; }
+  .index_galeria_img .galeria_img5 {
+    grid-area: a9; }
+  .index_galeria_img .galeria_img6 {
+    grid-area: a12; }
+  .index_galeria_img .galeria_img7 {
+    grid-area: a13; }
+  .index_galeria_img .galeria_img8 {
+    grid-area: a17; }
+  .index_galeria_img .galeria_img9 {
+    grid-area: a18; }
+  .index_galeria_img .galeria_img10 {
+    grid-area: a19; }
   .index_galeria_img :hover {
-    transform: scale(120%, 120%); }
+    transform: scale(105%, 105%);
+    border: solid 2px #D4AF37;
+    margin: -2px; }
   .index_galeria_img img {
-    margin: 16px; }
+    width: 100%;
+    height: 100%; }
 
 @media only screen and (max-width: 768px) {
   .index_info {
@@ -214,11 +237,10 @@ body {
 @media only screen and (max-width: 768px) {
   .index_galeria_img {
     display: flex;
-    flex-direction: column; }
-    .index_galeria_img img {
-      width: 75%; }
+    flex-direction: column;
+    gap: 2rem; }
     .index_galeria_img :hover {
-      transform: scale(110%, 110%); }
+      transform: scale(105%, 105%); }
   .slide_bistro {
     width: 100%;
     height: 100%;
